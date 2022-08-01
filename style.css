@@ -2,11 +2,20 @@ body{
     background-color: #5cdb95;
     font-family:'Courier New', Courier, monospace;
 }
+.topColumn{
+    display:flex;
+    justify-content: center;
+}
 button{
     outline: none;
     border:none;
     background:none;
     cursor:pointer;
+    font-size: 3rem;
+    transition:100ms;
+}
+button:hover{
+    transform:scale(1.2);
 }
 
 .title{
