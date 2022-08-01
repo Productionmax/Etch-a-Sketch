@@ -2,6 +2,10 @@ body{
     background-color: #5cdb95;
     font-family:'Courier New', Courier, monospace;
 }
+h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
 .topColumn{
     display:flex;
     justify-content: center;
@@ -22,4 +26,16 @@ button:hover{
     color: #05386b;
     display:flex;
     justify-content: center;
+}
+.container{
+    
+    margin:auto;
+    width:600px;
+    height:600px;
+    border:#05386b solid 5px;
+}
+/*Creates a variable with a global scope and -- is how we make the variables*/
+:root{
+    --numCol:1;
+    --numRow:1;
 }
