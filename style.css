@@ -1,0 +1,16 @@
+body{
+    background-color: #5cdb95;
+    font-family:'Courier New', Courier, monospace;
+}
+button{
+    outline: none;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+.title{
+    color: #05386b;
+    display:flex;
+    justify-content: center;
+}
