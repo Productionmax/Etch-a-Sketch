@@ -28,11 +28,20 @@ button:hover{
     justify-content: center;
 }
 .container{
-    
+    display:grid;
+    justify-content: center;
     margin:auto;
+    grid-template-columns: repeat(var(--numCol),1fr);
+    grid-template-rows: repeat(var(--numRow),1fr);
     width:600px;
     height:600px;
     border:#05386b solid 5px;
+}
+.cell{
+    display:flex;
+    padding:3px;
+    border:#05386b solid 1px;
+    background-color: #edf5e1;
 }
 /*Creates a variable with a global scope and -- is how we make the variables*/
 :root{
