@@ -3,9 +3,6 @@ const value = document.querySelector('#rangeValue');
 const slider = document.querySelector('.rangeSlider');
 let cell;
 let target;
-slider.oninput = function (){
-    value.innerHTML = this.value;
-}
 
 // The number of cells being made
 function makeCell(numCell){
@@ -14,6 +11,7 @@ function makeCell(numCell){
         cell.classList.add('cell');
         container.appendChild(cell);
     }
+  
 }
 //Set property changes this (variable, new value)
 //Structures the grid 
@@ -24,15 +22,26 @@ function makeGrid(numRow,numCol){
         makeCell(numRow);
     }
 }
+// function changeValue(){
+//     chooseSize(16);
+//     if (chooseSize !== 16){
+//     slider.oninput = function (){
+//         value.innerHTML = this.value;
+//         chooseSize(this.value);
+// }}
+// }
 
 function chooseSize(numGrid){
-    slider.oninput = function (){
-        value.innerHTML = this.value;
-        numGrid = value.innerHTML;
-        makeGrid(numGrid,numGrid);
-    }
-    
-    
+    makeGrid(numGrid,numGrid);
 }
 
-chooseSize();
+chooseSize(25);
+
+
+//moueover
+container.addEventListener('mouseover',sketch); //This container is a function itself due to inside of it being a function that is a constant
+function sketch(e){
+    if (e.target.className === 'cell'){
+        e.target.style.backgroundColor = 'black';
+    }
+}
