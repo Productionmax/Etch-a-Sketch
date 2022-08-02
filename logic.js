@@ -4,6 +4,13 @@ const slider = document.querySelector('.rangeSlider');
 const reset = document.querySelector('.resetbtn');
 let cell;
 
+value.innerHTML = slider.value;
+slider.oninput = function(){
+    value.innerHTML = this.value;
+    number = value.innerHTML;
+    chooseSize(number);
+}
+
 
 // The number of cells being made
 function makeCell(numCell){
@@ -32,11 +39,9 @@ function makeGrid(numRow,numCol){
 // }}
 // }
 
-function chooseSize(numGrid){
-    makeGrid(numGrid,numGrid);
+function chooseSize(number){
+    makeGrid(number,number);
 }
-
-chooseSize(25);
 
 
 //Sketch
@@ -47,8 +52,10 @@ function sketch(e){
     }
 }
 
+
 //Reset
 reset.addEventListener('click',erase);
 function erase(){
     window.location.reload();
 }
+
