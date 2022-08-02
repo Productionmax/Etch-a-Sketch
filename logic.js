@@ -5,11 +5,11 @@ const reset = document.querySelector('.resetbtn');
 let cell;
 
 value.innerHTML = slider.value;
-slider.oninput = function(){
-    value.innerHTML = this.value;
-    number = value.innerHTML;
-    chooseSize(number);
-}
+// slider.oninput = function(){
+//     value.innerHTML = this.value;
+//     number = value.innerHTML;
+//     chooseSize(number);
+// }
 
 
 // The number of cells being made
@@ -56,6 +56,18 @@ function sketch(e){
 //Reset
 reset.addEventListener('click',erase);
 function erase(){
-    window.location.reload();
+    // window.location.reload();
+    while (container.firstChild){
+        container.removeChild(container.lastChild);
+    }
+    chooseSize(36);
 }
 
+//value
+slider.addEventListener('input',function(e){
+    squareSize = e.target.value;
+    value.innerHTML = `${squareSize}`;
+})
+
+//function start
+chooseSize(36);
