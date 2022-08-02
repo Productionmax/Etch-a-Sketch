@@ -9,7 +9,42 @@ h1{
 .topColumn{
     display:flex;
     justify-content: center;
+    align-content: center;
+    gap:20px;
+    
 }
+.slider{
+    display:flex;
+    align-content: center;
+    align-items:center;
+}
+.slider p {
+    font-size: 26px;
+    font-weight: 600;
+    padding-left: 30px;
+    color: black;
+}
+.slider input[type="range"] {
+    -webkit-appearance:none !important;
+    width: 420px;
+    height: 2px;
+    background: black;
+    border: none;
+    outline: none;
+}
+.slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 30px;
+    height:30px;
+    background: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider input[type="range"]::-webkit-slider-thumb:hover {
+    background: black;
+}
+
 button{
     outline: none;
     border:none;

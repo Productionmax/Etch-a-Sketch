@@ -12,6 +12,10 @@
     <body>
         <div class="title"><h1>Etch-A-Sketch</h1></div>
         <div class="topColumn">
+            <div class="slider">
+                <input type="range" min= 16 max = 64 value=16 class="rangeSlider" oninput= rangeValue.innerText>
+                <p id="rangeValue">16</p>
+            </div>
             <button class="resetbtn">♻️</button>
         </div>
         <div class="container"></div>
