@@ -1,8 +1,9 @@
 const container = document.querySelector('.container');
 const value = document.querySelector('#rangeValue');
 const slider = document.querySelector('.rangeSlider');
+const reset = document.querySelector('.resetbtn');
 let cell;
-let target;
+
 
 // The number of cells being made
 function makeCell(numCell){
@@ -38,10 +39,16 @@ function chooseSize(numGrid){
 chooseSize(25);
 
 
-//moueover
+//Sketch
 container.addEventListener('mouseover',sketch); //This container is a function itself due to inside of it being a function that is a constant
 function sketch(e){
-    if (e.target.className === 'cell'){
-        e.target.style.backgroundColor = 'black';
+    if (e.target.className === 'cell'){ //this sees if the location of the target mousover is at a specific cell class in the container
+        e.target.style.backgroundColor = 'black'; //the target cell is getting blackened out
     }
+}
+
+//Reset
+reset.addEventListener('click',erase);
+function erase(){
+    window.location.reload();
 }
