@@ -5,12 +5,6 @@ const reset = document.querySelector('.resetbtn');
 let cell;
 
 value.innerHTML = slider.value;
-// slider.oninput = function(){
-//     value.innerHTML = this.value;
-//     number = value.innerHTML;
-//     chooseSize(number);
-// }
-
 
 // The number of cells being made
 function makeCell(numCell){
@@ -56,18 +50,17 @@ function sketch(e){
 //Reset
 reset.addEventListener('click',erase);
 function erase(){
-    // window.location.reload();
-    while (container.firstChild){
+    while (container.firstChild){ //While the first child still exist which is a cell, the while function removes every cell under container
         container.removeChild(container.lastChild);
     }
-    chooseSize(36);
+    chooseSize(value.innerHTML);
 }
 
-//value
+//value slider
 slider.addEventListener('input',function(e){
     squareSize = e.target.value;
     value.innerHTML = `${squareSize}`;
 })
 
 //function start
-chooseSize(36);
+chooseSize(16);
