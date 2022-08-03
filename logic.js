@@ -2,10 +2,16 @@ const container = document.querySelector('.container');
 const value = document.querySelector('#rangeValue');
 const slider = document.querySelector('.rangeSlider');
 const reset = document.querySelector('.resetbtn');
+const blackBtn = document.querySelector('.black');
+const colorBtn = document.querySelector('.color');
 let cell;
+let cellColor = document.querySelector('.cellColor');
 // Links the slider and the value together
 value.innerHTML = slider.value;
-
+// Changing color buttons
+blackBtn.addEventListener("click",function(){
+    cellColor.style.setProperty = ('--cellColor',"black");
+});
 // The number of cells being made
 function makeCell(numCell){
     for (let i=0;i < numCell;i++){
@@ -36,7 +42,7 @@ function chooseSize(number){
 container.addEventListener('mouseover',sketch); //This container is a function itself due to inside of it being a function that is a constant
 function sketch(e){
     if (e.target.className === 'cell'){ //this sees if the location of the target mousover is at a specific cell class in the container
-        e.target.style.backgroundColor = 'black'; //the target cell is getting blackened out
+            e.target.classList.add("cellColor"); //The target cell has the classlist added of the cellColor 
     }
 }
 

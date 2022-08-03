@@ -116,8 +116,12 @@ button:hover{
 .cell:hover{
     transform:scale(1.4);
 }
+.cellColor{
+    background-color: var(--cellColor);
+}
 /*Creates a variable with a global scope and -- is how we make the variables*/
 :root{
     --numCol:1;
     --numRow:1;
+    --cellColor:black;
 }
