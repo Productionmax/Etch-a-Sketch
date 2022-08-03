@@ -63,13 +63,14 @@ h1{
     text-transform: uppercase;
     color: #edf5e1;
     cursor: pointer;
-    border: 3px solid;
+    border: 3px solid black;
     padding: 0.25em 0.5em;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px black;
+    box-shadow: 1px 1px 0px 0px black, 2px 2px 0px 0px black, 3px 3px 0px 0px black, 4px 4px 0px 0px black, 5px 5px 0px 0px black;
     position: relative;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    font-weight: bold;
 }
 .black{
     background-color: #000;
