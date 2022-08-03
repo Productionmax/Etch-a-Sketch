@@ -3,7 +3,7 @@ const value = document.querySelector('#rangeValue');
 const slider = document.querySelector('.rangeSlider');
 const reset = document.querySelector('.resetbtn');
 let cell;
-
+// Links the slider and the value together
 value.innerHTML = slider.value;
 
 // The number of cells being made
@@ -24,15 +24,8 @@ function makeGrid(numRow,numCol){
         makeCell(numRow);
     }
 }
-// function changeValue(){
-//     chooseSize(16);
-//     if (chooseSize !== 16){
-//     slider.oninput = function (){
-//         value.innerHTML = this.value;
-//         chooseSize(this.value);
-// }}
-// }
 
+// FInal to start
 function chooseSize(number){
     makeGrid(number,number);
 }
@@ -53,7 +46,7 @@ function erase(){
     while (container.firstChild){ //While the first child still exist which is a cell, the while function removes every cell under container
         container.removeChild(container.lastChild);
     }
-    chooseSize(value.innerHTML);
+    chooseSize(value.innerHTML); //Everytime we press the button the new value in the slider will be applied after being wiped out
 }
 
 //value slider

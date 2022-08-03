@@ -31,6 +31,7 @@ h1{
     background: black;
     border: none;
     outline: none;
+    transition:150ms ;
 }
 .slider input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none !important;
@@ -43,6 +44,9 @@ h1{
 }
 .slider input[type="range"]::-webkit-slider-thumb:hover {
     background: black;
+}
+.slider input[type="range"]:hover{
+    transform:scale(1.1);
 }
 /* button.new{
     outline: none;
