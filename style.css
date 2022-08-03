@@ -89,7 +89,9 @@ button:hover{
     background-color: #edf5e1;
     transition-duration: 0s;
 }
-
+.cell:hover{
+    transform:scale(1.4);
+}
 /*Creates a variable with a global scope and -- is how we make the variables*/
 :root{
     --numCol:1;
