@@ -48,13 +48,36 @@ h1{
 .slider input[type="range"]:hover{
     transform:scale(1.1);
 }
-/* button.new{
+.upperBtn{
+    display:flex;
+    justify-content: center;
+    gap:16px;
+}
+.upperBtn button{
     outline: none;
     border:none;
-    background:none;
     cursor:pointer;
-} */
-
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #edf5e1;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px black;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.black{
+    background-color: #000;
+    
+}
+.color{
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+}
 button.resetbtn{
     outline: none;
     border:none;

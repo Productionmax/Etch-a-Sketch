@@ -32,13 +32,13 @@ function chooseSize(number){
 
 
 //Sketch
+
 container.addEventListener('mouseover',sketch); //This container is a function itself due to inside of it being a function that is a constant
 function sketch(e){
     if (e.target.className === 'cell'){ //this sees if the location of the target mousover is at a specific cell class in the container
         e.target.style.backgroundColor = 'black'; //the target cell is getting blackened out
     }
 }
-
 
 //Reset
 reset.addEventListener('click',erase);
@@ -54,6 +54,7 @@ slider.addEventListener('input',function(e){
     squareSize = e.target.value;
     value.innerHTML = `${squareSize}`;
 })
+//coloroptions
 
 //function start
 chooseSize(16);
