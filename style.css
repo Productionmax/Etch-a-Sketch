@@ -119,12 +119,9 @@ button:hover{
 .cellColor-black{
     background-color: black;
 }
-.cellColor-color{
-    background-color: var(--randomColor);
-}
+
 /*Creates a variable with a global scope and -- is how we make the variables*/
 :root{
     --numCol:1;
     --numRow:1;
-    --randomColor:black;
 }
