@@ -5,14 +5,18 @@ const reset = document.querySelector('.resetbtn');
 const blackBtn = document.querySelector('.black');
 const colorBtn = document.querySelector('.color');
 let cell;
-let cellColor = document.querySelector('.cellColor');
+let cellColor = document.querySelector(':root');
+let color;
 // Links the slider and the value together
 value.innerHTML = slider.value;
-// Changing color buttons
+//Changing color buttons
 blackBtn.addEventListener("click",function(){
-    cellColor.style.setProperty = ('--cellColor',"black");
+    color = 'black';
 });
-// The number of cells being made
+colorBtn.addEventListener("click",function(){
+    color = 'color';
+});
+//The number of cells being made
 function makeCell(numCell){
     for (let i=0;i < numCell;i++){
         cell = document.createElement('div');
@@ -38,11 +42,12 @@ function chooseSize(number){
 
 
 //Sketch
-
 container.addEventListener('mouseover',sketch); //This container is a function itself due to inside of it being a function that is a constant
 function sketch(e){
-    if (e.target.className === 'cell'){ //this sees if the location of the target mousover is at a specific cell class in the container
-            e.target.classList.add("cellColor"); //The target cell has the classlist added of the cellColor 
+    if (e.target.className === 'cell' && color == "black"){ //this sees if the location of the target mousover is at a specific cell class in the container
+        e.target.classList.add("cellColor-black"); //The target cell has the classlist added of the cellColor 
+    } else if (e.target.className === 'cell' && color == "color"){
+        e.target.classList.add("cellColor-color");
     }
 }
 
@@ -64,3 +69,4 @@ slider.addEventListener('input',function(e){
 
 //function start
 chooseSize(16);
+
