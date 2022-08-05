@@ -47,7 +47,10 @@ function sketch(e){
     if (e.target.className === 'cell' && color == "black"){ //this sees if the location of the target mousover is at a specific cell class in the container
         e.target.classList.add("cellColor-black"); //The target cell has the classlist added of the cellColor 
     } else if (e.target.className === 'cell' && color == "color"){
-        e.target.classList.add("cellColor-color");
+        const randomR = Math.floor(Math.random() * 256) //Generates a random color
+        const randomG = Math.floor(Math.random() * 256)
+        const randomB = Math.floor(Math.random() * 256)
+        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
     }
 }
 
@@ -65,7 +68,6 @@ slider.addEventListener('input',function(e){
     squareSize = e.target.value;
     value.innerHTML = `${squareSize}`;
 })
-//coloroptions
 
 //function start
 chooseSize(16);
